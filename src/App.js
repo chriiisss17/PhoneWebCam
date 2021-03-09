@@ -10,7 +10,6 @@ import React from 'react';
 import {
   StatusBar,
 } from 'react-native';
-import Loading from './components/Loading';
 import RootNavigation from './routes/RootNavigation';
 
 const App: () => React$Node = () => {

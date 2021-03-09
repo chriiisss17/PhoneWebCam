@@ -1,4 +1,5 @@
 import React from 'react';
+import * as Animatable from 'react-native-animatable';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -18,8 +19,10 @@ const styles = StyleSheet.create({
 const LogoScreen = () =>{
     return(
         <View style={styles.container}>
-            <MaterialCommunityIcons style={styles.icon} name="webcam" size={140} color={'green'}/>
-            <Text style={styles.title}> Phone WebCam</Text>
+            <Animatable.View animation={'bounceOut'} duration={2000} iterationCount={2} direction={'reverse'}>
+                <MaterialCommunityIcons style={styles.icon} name="webcam" size={140} color={'green'}/>
+            </Animatable.View>
+            <Animatable.Text animation={'bounceInRight'} duration={2500} iterationCount={2} style={styles.title}> Phone WebCam</Animatable.Text>
         </View>
     )
 }
